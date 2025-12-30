@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Result - AI Grading System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="student-dashboard.html" class="navbar-brand">AI Grading System</a>
+            <div class="navbar-nav">
+                <span style="color: #6b7280;">Welcome, <span id="userName"
+                        style="font-weight: 600; color: #1f2937;">Student</span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="aiResultContainer">
+        <a href="view-assignments.html" style="margin-bottom: 1rem; display: inline-block;">&larr; Back to
+            Assignments</a>
+
+        <div class="card ai-result-card">
+            <h1>Evaluation Result</h1>
+            <p id="asgTitle" style="margin-bottom: 2rem; font-size: 1.1rem; color: #6b7280;">Assignment Title</p>
+
+            <div class="grade-circle" id="gradeDisplay">A</div>
+
+            <div class="dashboard-grid" style="text-align: left; margin-top: 2rem;">
+                <div class="stat-card">
+                    <label class="stat-label">Total Score</label>
+                    <div class="stat-value" id="scoreDisplay">0/100</div>
+                </div>
+                <div class="stat-card">
+                    <label class="stat-label">Plagiarism Check</label>
+                    <div class="stat-value" id="plagiarismDisplay">0%</div>
+                </div>
+            </div>
+
+            <div
+                style="text-align: left; margin-top: 2rem; background: #f9fafb; padding: 1.5rem; border-radius: 0.5rem; border: 1px solid #e5e7eb;">
+                <h3 style="margin-bottom: 0.5rem;">AI Feedback</h3>
+                <p id="feedbackDisplay" style="color: #374151;">Loading feedback...</p>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <a href="student-dashboard.html" class="btn btn-secondary">Return Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/student.js"></script>
+</body>
+
+</html>

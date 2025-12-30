@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Assignments - AI Grading System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="student-dashboard.html" class="navbar-brand">AI Grading System</a>
+            <div class="navbar-nav">
+                <span style="color: #6b7280;">Welcome, <span id="userName"
+                        style="font-weight: 600; color: #1f2937;">Student</span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>All Assignments</h1>
+        <div id="viewAssignmentsList" class="assignment-list">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/student.js"></script>
+</body>
+
+</html>

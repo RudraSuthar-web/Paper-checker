@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Assignment - AI Grading System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="faculty-dashboard.html" class="navbar-brand">AI Grading System</a>
+            <div class="navbar-nav">
+                <span style="color: #6b7280;">Welcome, <span id="userName"
+                        style="font-weight: 600; color: #1f2937;">Faculty</span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="faculty-dashboard.html" style="margin-bottom: 1rem; display: inline-block;">&larr; Back to
+            Dashboard</a>
+        <h1 style="margin-bottom: 2rem;">Create New Assignment</h1>
+
+        <div class="card">
+            <form id="createAssignmentForm">
+                <div class="form-group">
+                    <label class="form-label">Assignment Title</label>
+                    <input type="text" id="asgTitle" class="form-control" required
+                        placeholder="e.g., Artificial Intelligence">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Subject</label>
+                    <select id="asgSubject" class="form-control" required>
+                        <option value="">Select Subject</option>
+                        <option value="Artificial Intelligence">Artificial Intelligence</option>
+                        <option value="Machine Learning">Machine Learning</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Database Systems">Database Systems</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <textarea id="asgDesc" class="form-control" placeholder="Instructions for students..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Submission Deadline</label>
+                    <input type="date" id="asgDeadline" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Question Paper PDF</label>
+                    <input type="file" id="asgPdf" class="form-control" accept=".pdf" required>
+                    <small style="color: #6b7280;">Upload the exam question paper.</small>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Solution/Key PDF</label>
+                    <input type="file" id="asgSolPdf" class="form-control" accept=".pdf" required>
+                    <small style="color: #6b7280;">Upload the solution key for AI grading.</small>
+                </div>
+
+                <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #e5e7eb;">
+
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3>Questions</h3>
+                    <button type="button" class="btn btn-secondary" id="addQuestionBtn">+ Add Question</button>
+                </div>
+
+                <div id="questionsContainer">
+                    <!-- Dynamic Questions go here -->
+                </div>
+
+                <div style="margin-top: 2rem; text-align: right;">
+                    <a href="faculty-dashboard.html" class="btn btn-secondary" style="margin-right: 1rem;">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Publish Assignment</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/faculty.js"></script>
+</body>
+
+</html>

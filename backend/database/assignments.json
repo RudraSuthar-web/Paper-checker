@@ -1,0 +1,81 @@
+[
+  {
+    "id": "asg_1767076372786",
+    "title": "dasd",
+    "subject": "Machine Learning",
+    "description": "dsada",
+    "deadline": "2025-12-31",
+    "teacherId": "u_3053985792",
+    "questionPdf": "asg_7777890304_question.pdf",
+    "solutionPdf": "asg_7777890304_solution.pdf",
+    "structure": [
+      {
+        "id": "Q1",
+        "sub_parts": []
+      },
+      {
+        "id": "Q2",
+        "sub_parts": []
+      },
+      {
+        "id": "Q3",
+        "sub_parts": []
+      },
+      {
+        "id": "Q4",
+        "sub_parts": []
+      },
+      {
+        "id": "Q5",
+        "sub_parts": []
+      },
+      {
+        "id": "Q6",
+        "sub_parts": []
+      },
+      {
+        "id": "Q7",
+        "sub_parts": []
+      },
+      {
+        "id": "Q8",
+        "sub_parts": []
+      }
+    ],
+    "questions": [
+      {
+        "id": "Q1",
+        "sub_parts": []
+      },
+      {
+        "id": "Q2",
+        "sub_parts": []
+      },
+      {
+        "id": "Q3",
+        "sub_parts": []
+      },
+      {
+        "id": "Q4",
+        "sub_parts": []
+      },
+      {
+        "id": "Q5",
+        "sub_parts": []
+      },
+      {
+        "id": "Q6",
+        "sub_parts": []
+      },
+      {
+        "id": "Q7",
+        "sub_parts": []
+      },
+      {
+        "id": "Q8",
+        "sub_parts": []
+      }
+    ],
+    "createdAt": "2025-12-30T12:02:52.786803"
+  }
+]

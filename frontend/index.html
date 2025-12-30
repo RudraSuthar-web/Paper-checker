@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Grading System</title>
+</head>
+
+<body>
+    <script src="js/data.js"></script>
+    <script>
+        // Check if user is logged in
+        const user = db.getCurrentUser();
+        if (user) {
+            if (user.role === 'faculty') {
+                window.location.href = 'faculty/faculty-dashboard.html';
+            } else {
+                window.location.href = 'student/student-dashboard.html';
+            }
+        } else {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+
+</html>

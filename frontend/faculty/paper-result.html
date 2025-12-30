@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Result - AI Grading System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="faculty-dashboard.html" class="navbar-brand">AI Grading System</a>
+            <div class="navbar-nav">
+                <span style="color: #6b7280;">Welcome, <span id="userName"
+                        style="font-weight: 600; color: #1f2937;">Faculty</span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="check-paper.html" style="margin-bottom: 1rem; display: inline-block;">&larr; Back to Paper Check</a>
+        <h1 style="margin-bottom: 2rem;">Paper Grading Result</h1>
+
+        <div id="paperResultContainer">
+            <div class="card" style="text-align: center; padding: 3rem;">
+                <div class="grade-circle" style="width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 2rem; display: flex; align-items: center; justify-content: center; font-size: 3rem; font-weight: bold; color: white; background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                    <span id="gradeDisplay">-</span>
+                </div>
+                <h2 id="scoreDisplay" style="font-size: 2rem; margin-bottom: 1rem;">0/100</h2>
+                <p style="color: #6b7280; margin-bottom: 2rem;">Paper ID: <span id="paperId">-</span></p>
+            </div>
+
+            <div class="card" style="margin-top: 2rem;">
+                <h3 style="margin-bottom: 1rem;">Feedback</h3>
+                <p id="feedbackDisplay" style="color: #374151; line-height: 1.6;">Loading feedback...</p>
+            </div>
+
+            <div class="card" style="margin-top: 2rem;">
+                <h3 style="margin-bottom: 1rem;">Detailed Results</h3>
+                <div id="detailedResults">
+                    <!-- Detailed results will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/faculty.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const user = await db.requireAuth('faculty');
+            if (!user) return;
+
+            const userNameEl = document.getElementById('userName');
+            if (userNameEl) userNameEl.textContent = user.name || user.username;
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const paperId = urlParams.get('id');
+
+            if (!paperId) {
+                document.getElementById('paperResultContainer').innerHTML = '<p>No paper ID provided.</p>';
+                return;
+            }
+
+            const paper = await db.getPaperById(paperId);
+            if (!paper) {
+                document.getElementById('paperResultContainer').innerHTML = '<p>Paper not found.</p>';
+                return;
+            }
+
+            const result = paper.result || {};
+            const scoreDisplayEl = document.getElementById('scoreDisplay');
+            const gradeDisplayEl = document.getElementById('gradeDisplay');
+            const feedbackDisplayEl = document.getElementById('feedbackDisplay');
+            const paperIdEl = document.getElementById('paperId');
+            const detailedResultsEl = document.getElementById('detailedResults');
+
+            if (scoreDisplayEl) {
+                const maxMarks = result.maxMarks !== undefined ? result.maxMarks : 100;
+                scoreDisplayEl.textContent = `${result.totalMarks || 0}/${maxMarks}`;
+            }
+            if (gradeDisplayEl) gradeDisplayEl.textContent = result.grade || '-';
+            if (feedbackDisplayEl) feedbackDisplayEl.textContent = result.feedback || 'No feedback available.';
+            if (paperIdEl) paperIdEl.textContent = paper.id;
+
+            // Color code grade
+            const circle = document.querySelector('.grade-circle');
+            if (circle) {
+                const grade = result.grade || 'F';
+                if (grade === 'A') circle.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+                else if (grade === 'B') circle.style.background = 'linear-gradient(135deg, #3b82f6, #2563eb)';
+                else if (grade === 'C') circle.style.background = 'linear-gradient(135deg, #f59e0b, #d97706)';
+                else circle.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+            }
+
+            // Display detailed results
+            if (detailedResultsEl && result.detailedResults) {
+                let html = '<table class="table"><thead><tr><th>Question</th><th>Marks Obtained</th><th>Max Marks</th><th>Feedback</th></tr></thead><tbody>';
+                result.detailedResults.forEach((q, index) => {
+                    html += `
+                        <tr>
+                            <td>${q.question_id || `Q${index + 1}`}</td>
+                            <td>${q.marks_obtained || 0}</td>
+                            <td>${q.max_marks || 0}</td>
+                            <td>${q.feedback || '-'}</td>
+                        </tr>
+                    `;
+                });
+                html += '</tbody></table>';
+                detailedResultsEl.innerHTML = html;
+            } else {
+                detailedResultsEl.innerHTML = '<p>No detailed results available.</p>';
+            }
+        });
+    </script>
+</body>
+
+</html>

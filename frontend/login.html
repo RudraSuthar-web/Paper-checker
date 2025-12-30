@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AI Grading System</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <h2 class="auth-title">AI Grading System</h2>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label class="form-label">Role</label>
+                    <select name="role" class="form-control" required>
+                        <option value="student">Student</option>
+                        <option value="faculty">Faculty</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Username</label>
+                    <input type="text" name="username" class="form-control" placeholder="Enter username" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+                </div>
+
+                <div id="errorMsg" style="color: red; margin-bottom: 1rem; display: none; font-size: 0.9rem;"></div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%">Sign In</button>
+            </form>
+
+            <div style="margin-top: 1.5rem; text-align: center; font-size: 0.9rem;">
+                <p>New user? <a href="register.html">Create Account</a></p>
+            </div>
+
+            <div style="margin-top: 1.5rem; text-align: center; font-size: 0.85rem; color: #6b7280;">
+                <p>Demo Credentials:</p>
+                <p>Faculty: <strong>faculty / password</strong></p>
+                <p>Student: <strong>student / password</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

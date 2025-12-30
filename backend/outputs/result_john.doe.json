@@ -1,0 +1,79 @@
+{
+  "student_name": "Student",
+  "results": [
+    {
+      "question_id": "Ex.1",
+      "marks_obtained": 10.0,
+      "max_marks": 10,
+      "feedback": "Excellent. The formula is correct, and the calculation is accurate, matching the expected correlation coefficient."
+    },
+    {
+      "question_id": "Ex.2",
+      "marks_obtained": 10.0,
+      "max_marks": 10,
+      "feedback": "Well done. You correctly derived the regression coefficients and the correlation coefficient, including its sign, matching the faculty key."
+    },
+    {
+      "question_id": "Ex.3",
+      "marks_obtained": 10.0,
+      "max_marks": 10,
+      "feedback": "Your calculations for finding the means, correlation coefficient, and standard deviation of y are sound and consistently performed based on the provided regression equations."
+    },
+    {
+      "question_id": "Ex.4",
+      "marks_obtained": 10.0,
+      "max_marks": 10,
+      "feedback": "Outstanding work. All rank correlation coefficients are correctly calculated, and the conclusion regarding the nearest agreement is accurate."
+    },
+    {
+      "question_id": "Ex.5",
+      "marks_obtained": 2.0,
+      "max_marks": 10,
+      "feedback": "While you correctly identified the formula for skewness, there are significant errors in the calculation of the mean (using the sum instead of the average in the final formula) and the standard deviation. Please re-evaluate your intermediate calculations for these statistical measures."
+    },
+    {
+      "question_id": "Ex.6",
+      "marks_obtained": 8.0,
+      "max_marks": 10,
+      "feedback": "Your final correlation coefficient is almost correct. While the intermediate steps in calculating the denominator were a bit confusing, you managed to arrive at a value very close to the expected result. Be careful with rounding."
+    },
+    {
+      "question_id": "Ex.7",
+      "marks_obtained": 5.0,
+      "max_marks": 10,
+      "feedback": "While the mean values are correct, you incorrectly identified which regression line corresponds to 'y on x' and 'x on y'. This led to incorrect estimations for y when x=99 and x when y=30. Remember that the product of regression coefficients must be less than or equal to 1."
+    },
+    {
+      "question_id": "Ex.8",
+      "marks_obtained": 10.0,
+      "max_marks": 10,
+      "feedback": "Excellent. All calculations for mean, standard deviation, and skewness are accurate and match the expected values."
+    },
+    {
+      "question_id": "Ex.9",
+      "marks_obtained": 10.0,
+      "max_marks": 10,
+      "feedback": "Correct. The correlation coefficient is indeed 0, indicating no linear relationship, matching the faculty key."
+    },
+    {
+      "question_id": "Ex.10",
+      "marks_obtained": 10.0,
+      "max_marks": 10,
+      "feedback": "Excellent work. All regression coefficients, correlation, equation of the line, and the estimation are correctly calculated, matching the faculty key."
+    },
+    {
+      "question_id": "Ex.11",
+      "marks_obtained": 10.0,
+      "max_marks": 10,
+      "feedback": "You correctly applied Spearman's rank correlation formula, and despite the noted discrepancy in sum of squared differences, you followed the value that led to the correct result. Excellent attention to detail."
+    },
+    {
+      "question_id": "Ex.12",
+      "marks_obtained": 10.0,
+      "max_marks": 10,
+      "feedback": "Your calculations for the regression line and the estimated performance are accurate and match the expected result."
+    }
+  ],
+  "total_score": 105.0,
+  "remarks": "The student demonstrates a strong understanding of most statistical concepts, particularly correlation and regression analysis, performing calculations with good accuracy. Specific areas for improvement include careful verification of input values, ensuring correct interpretation of statistical measures, and rigorously applying conditions for regression line identification. With attention to these details, the student's performance can reach an excellent level."
+}

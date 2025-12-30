@@ -1,0 +1,30 @@
+{
+    "john.doe": {
+        "password": "scrypt:32768:8:1$KeXyHpXnCgFZX4C2$ebf3f6fc1ea052c19e4c3180c886910ec355a09262627b62b9894394abd0f4f00f2f4705cedd7587c7ea0b22153025ef7bde1b03364f140223d4f6004f8e7718",
+        "role": "student"
+    },
+    "yoho": {
+        "password": "scrypt:32768:8:1$e6Bc3iKgzxrJ8lhT$4daa60fbf3f590c066f8429159ce07c823742ff679c7575b4ec861ca25eaa092b20b51800cec764e432284edf6a1d767d6e27e8539d9584b842141014c2f5f98",
+        "role": "faculty"
+    },
+    "student1.": {
+        "id": "u_9161281536",
+        "username": "student1.",
+        "password": "scrypt:32768:8:1$Ktkja5yN0J5bD7oy$a498125d13fdb31fc6e0d530d69b6f47db847bf79932ab3761bae8e1736a8d7a4a8e09df6a4031a0b394ffb5a9c84d41692c49e0424c81b0dfabb88e225e30cb",
+        "role": "student",
+        "name": "student1",
+        "department": "CSE",
+        "branch": "computer",
+        "semester": "5"
+    },
+    "faculty1.": {
+        "id": "u_3053985792",
+        "username": "faculty1.",
+        "password": "scrypt:32768:8:1$cpgKnfFmsYJVQGOj$b81535bda1084aaf426a92bd80b9af750cbfd0908abbadc6e3e1c5f66574a50f13dfec48d6833a93435697e7b6541b833c23fa187bd8ca22012a830b1cfe43f3",
+        "role": "faculty",
+        "name": "faculty1",
+        "department": "CSE",
+        "branch": "computer",
+        "semester": "5"
+    }
+}

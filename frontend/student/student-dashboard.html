@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - AI Grading System</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand">AI Grading System</a>
+            <div class="navbar-nav">
+                <span style="color: #6b7280;">Welcome, <span id="userName"
+                        style="font-weight: 600; color: #1f2937;">Student</span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="studentDashboard">
+        <h1 style="margin-bottom: 2rem;">Student Dashboard</h1>
+        <p>Welcome back, <span id="userName" style="font-weight: 600;">Student</span></p>
+
+        <div class="dashboard-grid">
+            <div class="stat-card">
+                <label class="stat-label">Pending Assignments</label>
+                <div class="stat-value" id="pendingCount">0</div>
+            </div>
+            <div class="stat-card">
+                <label class="stat-label">Completed</label>
+                <div class="stat-value" id="completedCount">0</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem;">
+            <h2>Up Next</h2>
+            <div id="pendingList" class="assignment-list">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/student.js"></script>
+</body>
+
+</html>
