@@ -2,7 +2,7 @@ import os
 from google import genai
 
 # Setup API Key (Best practice: use environment variables, but this works for now)
-API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyDB64I194gsLOpL-Jc9FMPK_pT7n6VVdaM")
+API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyAKWjyZk1pnYVIEhRl4Oh_I602u1ydFkSw")
 
 # Initialize Client once here to import elsewhere
 client = genai.Client(api_key=API_KEY)
